@@ -116,8 +116,8 @@ app.get('/search', async (req, res) => {
 // 4. GET /trend?geo={geo} (トレンド動画)
 // ----------------------------------------------------
 app.get('/trend', async (req, res) => {
-    // geoが指定されていない場合は 'US' をデフォルト値とする
-    const geo = req.query.geo || 'US'; 
+    // geoが指定されていない場合は 'JP' をデフォルト値とする
+    const geo = req.query.geo || 'JP'; 
 
     try {
         const data = await fetchRapidApi('/trending', { geo: geo }, 'trending');
